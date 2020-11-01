@@ -6,6 +6,7 @@ import {Col, Row} from "react-bootstrap";
 
 class Table extends Component {
     constructor(props) {
+        super();
         super(props);
 
         this.state = {

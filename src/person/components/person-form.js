@@ -61,7 +61,7 @@ class PersonForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    toggleForm() {
+   toggleForm() {
         this.setState({collapseForm: !this.state.collapseForm});
     }
 
@@ -77,6 +77,7 @@ class PersonForm extends React.Component {
 
         updatedFormElement.value = value;
         updatedFormElement.touched = true;
+        console.log("ValidaTION Rules : "+updatedFormElement.validationRules);
         updatedFormElement.valid = validate(value, updatedFormElement.validationRules);
         updatedControls[name] = updatedFormElement;
 

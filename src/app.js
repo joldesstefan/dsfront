@@ -2,7 +2,14 @@ import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavigationBar from './navigation-bar'
 import Home from './home/home';
+import Test from './test/test';
+import DoctorHome from './doctor/doctor-home';
+//import {browserHistory} from 'react-switch'
+
 import PersonContainer from './person/person-container'
+import PersonPage from './person/components/person-page'
+import DoctorPage from './doctor/doctor-page'
+import MedicationPage from './medication/medication-page'
 
 import ErrorPage from './commons/errorhandling/error-page';
 import styles from './commons/styles/project-style.css';
@@ -14,10 +21,10 @@ class App extends React.Component {
 
         return (
             <div className={styles.back}>
-            <Router>
+            <Router >
                 <div>
                     <NavigationBar />
-                    <Switch>
+                    <Switch >
 
                         <Route
                             exact
@@ -29,6 +36,41 @@ class App extends React.Component {
                             exact
                             path='/person'
                             render={() => <PersonContainer/>}
+                        />
+                          <Route
+                            
+                            path='/person/:id'
+                            component = {PersonPage} // cum fac sa dat <TEst personID = ?/>
+                        />
+                           <Route
+                            exact
+                            path='/test'
+                            render={() => <Test />}
+                        />
+
+
+                           <Route
+                            exact
+                            path='/doctorHome'
+                            render={() => <DoctorHome />}
+                        />
+
+ <Route
+                            
+                            path='/doctorPage/:id'
+                            component = {DoctorPage} // cum fac sa dat <TEst personID = ?/>
+                        />
+
+
+
+
+
+
+                        
+ <Route
+                            
+                            path='/medicationPage/:id'
+                            component = {MedicationPage} // cum fac sa dat <TEst personID = ?/>
                         />
 
                         {/*Error*/}

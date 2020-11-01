@@ -14,12 +14,13 @@ import PersonForm from "./components/person-form";
 
 import * as API_USERS from "./api/person-api"
 import PersonTable from "./components/person-table";
-
+ 
 
 
 class PersonContainer extends React.Component {
 
     constructor(props) {
+        super();
         super(props);
         this.toggleForm = this.toggleForm.bind(this);
         this.reload = this.reload.bind(this);
@@ -77,7 +78,8 @@ class PersonContainer extends React.Component {
                     <br/>
                     <Row>
                         <Col sm={{size: '8', offset: 1}}>
-                            <Button color="primary" onClick={this.toggleForm}>Add Person </Button>
+                        <Button type={"submit"}  onClick={this.toggleForm}>  Add person </Button>
+
                         </Col>
                     </Row>
                     <br/>

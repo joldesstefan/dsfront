@@ -23,7 +23,7 @@ class APIResponseErrorMessage extends React.Component {
 
                 <UncontrolledAlert color="danger">
                     An unexpected error occurred on the server side!
-                    { this.state.errorStatus > 1 && <Button color="link"  onClick={this.toggleForm}>Details...</Button>}
+                    { this.state.errorStatus > 0 && <Button color="link"  onClick={this.toggleForm}>Details...</Button>}
                 </UncontrolledAlert>
 
                 { this.state.errorStatus > 1 &&

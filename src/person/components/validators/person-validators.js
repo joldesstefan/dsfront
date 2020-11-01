@@ -9,7 +9,7 @@ const requiredValidator = value => {
 
 const emailValidator = value => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(value).toLowerCase());
+    return re.test(String(value).toLowerCase()) ||value === null || value === ""
 };
 
 const validate = (value, rules) => {

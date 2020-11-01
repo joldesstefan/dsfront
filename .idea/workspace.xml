@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4b7a6084-60e0-4de1-868d-16486b7fcb0e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/commons/errorhandling/api-response-error-message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commons/errorhandling/api-response-error-message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commons/hosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commons/hosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commons/tables/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commons/tables/table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/person-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/person-container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jEowHizc5eGl9fiXJD5WpAuJnd" />
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b7a6084-60e0-4de1-868d-16486b7fcb0e" name="Default Changelist" comment="" />
+      <created>1603378849026</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603378849026</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
