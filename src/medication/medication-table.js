@@ -13,7 +13,7 @@ import {
 } from 'reactstrap';
 import { Redirect } from "react-router";
 
-class UserTable extends React.Component {
+class MedicationTable extends React.Component {
 
  
 openMedicationPage(props)
@@ -84,4 +84,4 @@ openMedicationPage(props)
     }
 }
 
-export default UserTable;
+export default MedicationTable;

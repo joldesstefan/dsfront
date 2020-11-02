@@ -310,7 +310,7 @@ handleDelete() {
 
 <Modal isOpen={this.state.showMessage} toggle={this.toogleMessage}
 className={this.props.className} size="lg">
-<ModalHeader toggle={this.toogleMessage}> Doctor Updated </ModalHeader>
+<ModalHeader toggle={this.toogleMessage}>  {this.state.messsage} </ModalHeader>
  
 </Modal>
     }

@@ -19,6 +19,9 @@ import * as MEDICATION_API from "../medication/api/medication-api"
 
 import UserTable from './user-table'
 import DoctorForm from './doctor-form'
+import CaregiverForm from '../caregiver/caregiver-form'
+import PatientForm from '../patient/pacient-form'
+
 import MedicationTable from '../medication/medication-table'
 import MedicationForm from '../medication/medication-form'
 
@@ -51,10 +54,23 @@ class DoctorHome extends React.Component {
         };
 
         this.toggleInsertDoctorForm = this.toggleInsertDoctorForm.bind(this);
-        this.reloadDoctor = this.reloadDoctor.bind(this);
-        this.fetchMedication = this.fetchMedication.bind(this);
-        this.reloadMedication = this.reloadMedication.bind(this);
+        this.toggleInsertCaregiverForm = this.toggleInsertCaregiverForm.bind(this);
+        this.toggleInsertPatientForm = this.toggleInsertPatientForm.bind(this);
         this.toggleInsertMedicationForm = this.toggleInsertMedicationForm.bind(this);
+
+
+
+        this.reloadDoctor = this.reloadDoctor.bind(this);
+        this.reloadCaregiver = this.reloadCaregiver.bind(this);
+        this.reloadPatient = this.reloadPatient.bind(this);
+        this.reloadMedication = this.reloadMedication.bind(this);
+
+
+        this.fetchUsers = this.fetchUsers.bind(this);
+        this.fetchMedication = this.fetchMedication.bind(this);
+
+
+
 
     }
 
@@ -104,12 +120,32 @@ class DoctorHome extends React.Component {
         this.state.insertMedication = !this.state.insertMedication;
        this.setState(this.state);
    }
+   toggleInsertCaregiverForm() {
+    this.state.insertCaregiver = !this.state.insertCaregiver;
+   this.setState(this.state);
+}
+toggleInsertPatientForm() {
+    this.state.insertPatient = !this.state.insertPatient;
+   this.setState(this.state);
+}
 
 
     reloadDoctor() {
         this.state.isLoaded = false;
         this.setState(this.state);
         this.toggleInsertDoctorForm();
+        this.fetchUsers();
+    }
+    reloadCaregiver() {
+        this.state.isLoaded = false;
+        this.setState(this.state);
+        this.toggleInsertCaregiverForm();
+        this.fetchUsers();
+    }
+    reloadPatient() {
+        this.state.isLoaded = false;
+        this.setState(this.state);
+        this.toggleInsertPatientForm();
         this.fetchUsers();
     }
     reloadMedication() {
@@ -130,8 +166,8 @@ class DoctorHome extends React.Component {
                     <Row>
                         <Col sm={{size: '8', offset: 1}}>
                         <Button color = "primary"  onClick={this.toggleInsertDoctorForm}>  Add doctor </Button>
-                        <Button color = "primary"   onClick={this.toggleForm}>  Add patient </Button>
-                        <Button color = "primary"   onClick={this.toggleForm}>  Add caregiver </Button>
+                        <Button color = "primary"   onClick={this.toggleInsertPatientForm}>  Add patient </Button>
+                        <Button color = "primary"   onClick={this.toggleInsertCaregiverForm}>  Add caregiver </Button>
 
                         </Col>
                     </Row>
@@ -184,6 +220,20 @@ class DoctorHome extends React.Component {
                     </ModalBody>
                 </Modal>
 
+                <Modal isOpen={this.state.insertCaregiver} toggle={this.toggleInsertCaregiverForm}
+                       className={this.props.className} size="lg">
+                    <ModalHeader toggle={this.toggleInsertCaregiverForm}> Add Caregiver: </ModalHeader>
+                    <ModalBody>
+                        <CaregiverForm reloadHandler={this.reloadCaregiver}/>
+                    </ModalBody>
+                </Modal>
+                <Modal isOpen={this.state.insertPatient} toggle={this.toggleInsertPatientForm}
+                       className={this.props.className} size="lg">
+                    <ModalHeader toggle={this.toggleInsertPatientForm}> Add Pacient: </ModalHeader>
+                    <ModalBody>
+                        <PatientForm reloadHandler={this.reloadPatient}/>
+                    </ModalBody>
+                </Modal>
 
                 <Modal isOpen={this.state.insertMedication} toggle={this.toggleInsertMedicationForm}
                        className={this.props.className} size="lg">

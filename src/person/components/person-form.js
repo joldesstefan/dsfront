@@ -77,7 +77,6 @@ class PersonForm extends React.Component {
 
         updatedFormElement.value = value;
         updatedFormElement.touched = true;
-        console.log("ValidaTION Rules : "+updatedFormElement.validationRules);
         updatedFormElement.valid = validate(value, updatedFormElement.validationRules);
         updatedControls[name] = updatedFormElement;
 

@@ -159,6 +159,8 @@ class MedicationForm extends React.Component {
                            valid={this.state.formControls.sideEffects.valid}
                            required
                     />
+                        {this.state.formControls.sideEffects.touched && !this.state.formControls.sideEffects.valid &&
+                    <div className={"error-message"}> * Side effects must have at least 3 characters</div>}
                 </FormGroup>
 
               

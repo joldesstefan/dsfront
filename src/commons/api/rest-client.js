@@ -6,7 +6,11 @@ function performRequest(request, callback){
                     response.json().then(json => callback(json, response.status,null));
                 }
                 else {
+                    if(response!=null)
+                    {
+                        console.log("Raspuns " + JSON.stringify(response));
                     response.json().then(err => callback(null, response.status,  err));
+                    }
                 }
             })
         .catch(function (err) {

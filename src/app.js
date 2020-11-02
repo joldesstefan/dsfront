@@ -9,10 +9,13 @@ import DoctorHome from './doctor/doctor-home';
 import PersonContainer from './person/person-container'
 import PersonPage from './person/components/person-page'
 import DoctorPage from './doctor/doctor-page'
+import CaregiverPage from './caregiver/caregiver-page'
+ 
 import MedicationPage from './medication/medication-page'
 
 import ErrorPage from './commons/errorhandling/error-page';
 import styles from './commons/styles/project-style.css';
+import PatientPage from './patient/patient-page';
 
 class App extends React.Component {
 
@@ -61,7 +64,18 @@ class App extends React.Component {
                             component = {DoctorPage} // cum fac sa dat <TEst personID = ?/>
                         />
 
+<Route
+                            
+                            path='/caregiverPage/:id'
+                            component = {CaregiverPage} // cum fac sa dat <TEst personID = ?/>
+                        />
 
+
+<Route
+                            
+                            path='/patientPage/:id'
+                            component = {PatientPage} // cum fac sa dat <TEst personID = ?/>
+                        />
 
 
 
