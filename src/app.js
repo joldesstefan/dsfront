@@ -16,6 +16,8 @@ import MedicationPage from './medication/medication-page'
 import ErrorPage from './commons/errorhandling/error-page';
 import styles from './commons/styles/project-style.css';
 import PatientPage from './patient/patient-page';
+import MedicationPeriodPage from './medication-period/medication-period-page';
+import MedicationPeriodTable from './medication-period/medication-period-table';
 
 class App extends React.Component {
 
@@ -76,6 +78,13 @@ class App extends React.Component {
                             path='/patientPage/:id'
                             component = {PatientPage} // cum fac sa dat <TEst personID = ?/>
                         />
+
+<Route
+                            
+                            path='/medicationPeriodPage/:id'
+                            component = {MedicationPeriodPage} // cum fac sa dat <TEst personID = ?/>
+                        />
+
 
 
 

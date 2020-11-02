@@ -19,6 +19,9 @@ class MedicationPeriodTable extends React.Component {
  
 openMedicationPeriodPage(props)
 {
+    this.state.redirectTo = "/medicationPeriodPage/"+props.original.id;
+    this.state.redirect = true;
+    this.setState(this.state);
      
 }
     
