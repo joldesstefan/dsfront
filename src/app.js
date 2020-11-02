@@ -16,9 +16,12 @@ import MedicationPage from './medication/medication-page'
 import ErrorPage from './commons/errorhandling/error-page';
 import styles from './commons/styles/project-style.css';
 import PatientPage from './patient/patient-page';
+import PatientHome from './patient/patient-home';
+
 import MedicationPeriodPage from './medication-period/medication-period-page';
 import MedicationPeriodTable from './medication-period/medication-period-table';
-
+import MedicationPeriodPatientPage from './patient/medication-period-patient-page';
+import CaregiverHome from './caregiver/caregiver-home'
 class App extends React.Component {
 
 
@@ -60,6 +63,19 @@ class App extends React.Component {
                             render={() => <DoctorHome />}
                         />
 
+<Route
+                             
+                            path='/patientHome/:id'
+                            component= {PatientHome}
+                        />
+
+
+<Route
+                             
+                            path='/caregiverHome/:id'
+                            component= {CaregiverHome}
+                        />
+
  <Route
                             
                             path='/doctorPage/:id'
@@ -86,7 +102,11 @@ class App extends React.Component {
                         />
 
 
-
+<Route
+                            
+                            path='/medicationPeriodPatientPage/:id'
+                            component = {MedicationPeriodPatientPage} // cum fac sa dat <TEst personID = ?/>
+                        />
 
 
                         

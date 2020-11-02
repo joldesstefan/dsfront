@@ -6,7 +6,8 @@ const endpoint = {
     patient: '/patient',
     update:"/update",
     delete : "/delete",
-    setCaregiver : "/setcaregiver"
+    setCaregiver : "/setcaregiver",
+    getByCaregiver : "/getByCaregiver"
 };
 
  
@@ -40,7 +41,20 @@ function postPatient(user, callback){
 
     RestApiClient.performRequest(request, callback);
 }
+function getPatientByCaregiver(user, callback){
+    let request = new Request(HOST.backend_api + endpoint.patient+ endpoint.getByCaregiver , {
+        method: 'POST',
+        headers : {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user)
+    });
 
+    console.log("URL: " + request.url);
+
+    RestApiClient.performRequest(request, callback);
+}
 
 function postUpdatePatient(user, callback){
     let request = new Request(HOST.backend_api + endpoint.patient + endpoint.update, {
@@ -87,5 +101,6 @@ export {
     postUpdatePatient,
     getPatientById,
     deletePatient,
-    setCaregiverPatient
+    setCaregiverPatient,
+    getPatientByCaregiver
 };
